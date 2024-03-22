@@ -1,0 +1,69 @@
+.our_team_banner {
+    width: 100%;
+    padding: 20px;
+}
+.our_team_title {
+    width: 30%;
+    margin: 0 auto;
+    border-bottom: 1px solid #1E1E1E;
+    border-bottom-width: thin;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: black;
+    text-align: center;
+    font-size: clamp(15px, 3vw, 34px);
+    font-weight: 400;
+}
+.our_team_description {
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    margin-bottom: 0;
+    color: black;
+    font-size: clamp(8px, 3vw, 13px);
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 3%;
+}
+.our_team_doctors_lists {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 5%;
+}
+.our_team_doctors_lists .doctors {
+    margin-bottom: 4%;
+    text-align: center;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.our_team_doctors_lists .doctors:nth-child(odd){
+    background-color: #B7E3EB;
+}
+.our_team_doctors_lists .doctors:nth-child(even){
+    background-color: #B9EBBA;
+}
+.our_team_doctors_lists .doctors .doctor_info_name {
+    margin: 0;
+    position: relative;
+    text-align: left;
+    color: #1E1E1E;
+    font-size: 13px;
+}
+.our_team_doctors_lists .doctors .doctor_info_specialization {
+    margin: 0;
+    color: #7C7C7C;
+    position: relative;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+}
+.our_team_doctors_lists .doctors .doctor_info{
+    position: absolute;
+    bottom: 0;
+}
