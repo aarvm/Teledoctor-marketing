@@ -1,9 +1,9 @@
 import styles from "./contact.module.css";
 interface Content {
-  id: number;
-  imgUrl: string;
-  title: string;
-  addressData: {
+  id?: number;
+  imgUrl?: string;
+  title?: string;
+  addressData?: {
     title?: string;
     address?: string;
     location?: string;
@@ -74,23 +74,23 @@ const ContactUs = () => {
         <h1 className="header_name">Contact us</h1>
       </header>
       <section className={styles.contactus_section}>
-        {content.map((data) => (
-          <div className={styles.contactus_item} key={data?.id}>
+        {content.map(({id,imgUrl,title,addressData}) => (
+          <div className={styles.contactus_item} key={id}>
             <div className={styles.contactus_item_icon}>
-              <img src={data?.imgUrl} alt={data?.title} />
+              <img src={imgUrl} alt={title} />
             </div>
-            <h1 className={styles.contact_head}>{data?.title}</h1>
-            {data?.addressData?.map((item) => (
+            <h1 className={styles.contact_head}>{title}</h1>
+            {addressData?.map(({title,address,location,mail,phoneNumber}) => (
               <div className={styles.location_list}>
                 <div>
-                  <h3 className={styles.location_head}>{item?.title}</h3>
-                  {item?.address && item?.location && (
+                  <h3 className={styles.location_head}>{title}</h3>
+                  {address && location && (
                     <>
-                      <p>{item?.address}</p> <p>{item?.location}</p>
+                      <p>{address}</p> <p>{location}</p>
                     </>
                   )}
-                  {item?.phoneNumber && <p>{item?.phoneNumber}</p>}
-                  {item?.mail && <p>{item?.mail}</p>}
+                  {phoneNumber && <p>{phoneNumber}</p>}
+                  {mail && <p>{mail}</p>}
                 </div>
               </div>
             ))}

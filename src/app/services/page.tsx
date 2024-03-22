@@ -1,9 +1,9 @@
 import styles from "./service.module.css";
 interface ServiceData {
-  id:number;
-  title: string;
-  content: string;
-  imgUrl: string;
+  id?:number;
+  title?: string;
+  content?: string;
+  imgUrl?: string;
 }
 
 const serviceData: ServiceData[] = [
@@ -37,13 +37,13 @@ const Service = () => {
           <h1 className="header_name">Our Services</h1>
         </header>
         <section className={styles.services}>
-          {serviceData?.map((data) => (
-            <article className={`${styles.services_list}`} key={data?.id} >
+          {serviceData?.map(({id,imgUrl,title,content}) => (
+            <article className={`${styles.services_list}`} key={id} >
               <div className={styles.service_img_container}>
-                <img src={data?.imgUrl} alt={data?.title} />
+                <img src={imgUrl} alt={title} />
               </div>
-              <h3 className="text_center">{data?.title}</h3>
-              <p>{data?.content}</p>
+              <h3 className="text_center">{title}</h3>
+              <p>{content}</p>
             </article>
           ))}
         </section>
