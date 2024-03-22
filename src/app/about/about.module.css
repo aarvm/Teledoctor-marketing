@@ -1,0 +1,37 @@
+ 
+
+.about_us_page {
+    height: 100vh;
+}
+
+.about_us_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: open sans;    
+}
+
+.about_us_title {
+    font-size: 30px;
+    line-height: 41px;
+    padding: 10px;
+    border-bottom: 1px solid ;
+    padding:15px 55px;
+}
+
+.about_us_description{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.about_us_container > * {
+    padding: 20px 30px;
+}
+
+@media screen and (max-width:780px){
+    .about_us_image {
+        width: 60%;
+    }
+}
