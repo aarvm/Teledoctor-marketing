@@ -75,7 +75,7 @@ const ContactUs = () => {
       </header>
       <section className={styles.contactus_section}>
         {content.map((data) => (
-          <div className={styles.contactus_item} key={data?.id} >
+          <div className={styles.contactus_item} key={data?.id}>
             <div className={styles.contactus_item_icon}>
               <img src={data?.imgUrl} alt={data?.title} />
             </div>
@@ -84,14 +84,13 @@ const ContactUs = () => {
               <div className={styles.location_list}>
                 <div>
                   <h3 className={styles.location_head}>{item?.title}</h3>
-                  {data.title === "Address" && (
+                  {item?.address && item?.location && (
                     <div>
-                      <p>{item.address}</p>
-                      <p>{item.location}</p>
+                      <p>{item?.address}</p> <p>{item?.location}</p>
                     </div>
                   )}
-                  {data.title === "Phone" && <p>{item.phoneNumber}</p>}
-                  {data.title === "Email" && <p>{item.mail}</p>}
+                  {item?.phoneNumber && <p>{item?.phoneNumber}</p>}
+                  {item?.mail && <p>{item?.mail}</p>}
                 </div>
               </div>
             ))}
