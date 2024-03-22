@@ -85,9 +85,9 @@ const ContactUs = () => {
                 <div>
                   <h3 className={styles.location_head}>{item?.title}</h3>
                   {item?.address && item?.location && (
-                    <div>
+                    <>
                       <p>{item?.address}</p> <p>{item?.location}</p>
-                    </div>
+                    </>
                   )}
                   {item?.phoneNumber && <p>{item?.phoneNumber}</p>}
                   {item?.mail && <p>{item?.mail}</p>}
