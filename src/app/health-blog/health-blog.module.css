@@ -1,0 +1,42 @@
+.health_blog {
+  text-align: center;
+}
+.health_blog_main_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.health_blog_image {
+  width: 360px;
+  height: 223px;
+}
+.health_blog_headings {
+  font-size: 30px;
+  display: inline-block;
+  border-bottom: 1px solid;
+  padding: 15px 55px;
+}
+.health_blog_container {
+  width: 360px;
+}
+.health_blog_container_heading {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.health_blog_secondary_heading {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.health_blog_content {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.read_more {
+  text-align: center;
+  margin: 60px 0;
+}
+.read_more_link {
+  color: #2e90fa;
+}
